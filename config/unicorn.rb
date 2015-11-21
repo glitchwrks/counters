@@ -1,4 +1,4 @@
-app_path = '/home/services/site_services/current'
+app_path = '/home/services/site_services'
 
 worker_processes 2
 working_directory "#{app_path}/current"
