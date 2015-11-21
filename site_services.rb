@@ -14,4 +14,6 @@ class SiteServices < Sinatra::Base
     Hit.process_hit(request, counter)
     counter.javascript_hit_count(params[:ipv6])
   end
+
+  run! if app_file == $0
 end
