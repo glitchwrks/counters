@@ -5,8 +5,6 @@ Dir.glob(File.dirname(File.absolute_path(__FILE__)) + '/models/*', &method(:requ
 
 class SiteServices < Sinatra::Base
 
-# set :bind, "0.0.0.0"
-
   get '/counters/:page' do
     counter = Counter.find_by(:name => params[:page])
     halt 404 unless counter.present?
