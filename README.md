@@ -10,7 +10,7 @@ This is a little Sinatra app that handles dynamic content for glitchwrks.com. Ri
 - Capistrano 3 for deployments
 - Unicorn for app serving
 
-Currently using MariaDB for the database, but it uses nothing specific to MariaDB and works fine with even SQLite.
+Currently using MariaDB for the database, but it uses nothing specific to MariaDB and works fine with even SQLite. It can be run as a Unicorn application, or directly via `ruby site_services.rb`.
 
 ### Counters
 
