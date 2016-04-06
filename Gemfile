@@ -5,6 +5,7 @@ gem 'sinatra-activerecord'
 gem 'mysql2'
 gem 'rake'
 gem 'unicorn'
+gem 'require_all'
 
 group :development do
   gem 'capistrano' 

@@ -1,7 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/activerecord'
+require 'require_all'
 
-Dir.glob(File.dirname(File.absolute_path(__FILE__)) + '/models/*', &method(:require))
+require_all 'models'
 
 class SiteServices < Sinatra::Base
 
