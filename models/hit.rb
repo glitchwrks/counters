@@ -7,7 +7,8 @@ class Hit < ActiveRecord::Base
 
   def self.process_hit(request, counter)
   	begin
-    	find_or_create_by(:address => request.ip, :counter => counter, :ipv6 => request.ip.include?(':')).touch
+      hit = find_or_create_by(:address => request.ip, :counter => counter, :ipv6 => request.ip.include?(':'))
+      hit.touch unless hit.new_record?
     rescue ActiveRecord::RecordNotUnique
     	retry
     end
