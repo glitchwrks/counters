@@ -9,5 +9,6 @@ set :unicorn_pid, "/var/run/unicorn/site_services.pid"
 set :linked_files, %w{config/database.yml config/email.yml}
 set :rack_env, :production
 set :rails_env, :production
+set :environment, :production
 
 after 'deploy', 'unicorn:reload'
