@@ -1,0 +1,2 @@
+class SuspiciousMessage < Message
+end

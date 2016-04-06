@@ -1,0 +1,6 @@
+From: <%= @message.name %> <<%= @message.email %>>
+To: Glitchworks Contact <<%= @config[:destination_email] %>>
+Subject: <%= @message.sanitized_subject %> (from contact form)
+Date: <%= Time.now.to_s %>
+
+<%= @message.printable_content %>

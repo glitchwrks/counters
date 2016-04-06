@@ -1,0 +1,2 @@
+class FailedMessage < Message
+end

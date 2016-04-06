@@ -1,0 +1,11 @@
+development:
+    server: mailtrap.io
+    domain: mailtrap.io
+    port: 2525
+    username: YourUsername
+    password: YourPassword
+
+contact_mailer:
+    destination_email: where_the_email_goes@glitchwrks.com
+    save_suspicious_messages: true
+    save_failed_messages: true
