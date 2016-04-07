@@ -24,14 +24,14 @@ class SiteServices < Sinatra::Base
       mailer.execute
 
       if mailer.errors.any?
-        redirect 'http://localhost:4000/contact/user_error.html'
+        redirect 'http://www.glitchwrks.com/contact/user_error.html'
       else
-        redirect 'http://localhost:4000/contact/success.html'
+        redirect 'http://www.glitchwrks.com/contact/success.html'
       end
     rescue => exception
       logger.error "Exception thrown while sending a contact email"
       logger.error exception
-      redirect 'http://localhost:4000/contact/server_error.html'
+      redirect 'http://www.glitchwrks.com/contact/server_error.html'
     end
   end
 
