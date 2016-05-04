@@ -18,7 +18,7 @@ class SendTextEmailService
   def send_email
     smtp = Net::SMTP.new(@config['server'], @config['port'])
     smtp.enable_starttls
-    smtp.start(@config['domain'], @config['username'], @config['password'], :cram_md5)
+    smtp.start(@config['domain'], @config['username'], @config['password'])
     smtp.send_message(@content, @source_email, @destination_email)
   end
 end

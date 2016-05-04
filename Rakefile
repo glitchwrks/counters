@@ -69,3 +69,17 @@ namespace :counter do
     puts
   end
 end
+
+namespace :project do
+  desc 'Create a new project with NAME and PRINTABLE_NAME'
+  task :create do
+    project = Project.create(
+      :name => ENV['NAME'], 
+      :printable_name => ENV['PRINTABLE_NAME']
+    )
+
+    if project.errors.any?
+      project.errors.messages.each { |field, errors| puts "Error on #{field.upcase}: #{errors.join(', ')}" }
+    end
+  end
+end
