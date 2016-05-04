@@ -51,4 +51,6 @@ rake project:create NAME=project-name PRINTABLE_NAME='The Printable Name'
 
 ### CAPTCHA Service
 
-This service was written for the Preorder feature, but is generic and can be used elsewhere. It uses Google's [reCAPTCHA service](https://www.google.com/recaptcha). The service is configured through [/config/recaptcha.yml](https://github.com/chapmajs/site_services/blob/master/config/recaptcha.yml.example) which allows per-action API key specification
+This service was written for the Preorder feature, but is generic and can be used elsewhere. It uses Google's [reCAPTCHA service](https://www.google.com/recaptcha). The service is configured through [/config/recaptcha.yml](https://github.com/chapmajs/site_services/blob/master/config/recaptcha.yml.example) which allows per-action API key specification.
+
+If the CAPTCHA verification fails, the failure is logged to the DB with the response from Google and the IP that the request was made from.
