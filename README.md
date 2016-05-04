@@ -31,3 +31,20 @@ This feature is controlled through [/config/email.yml](https://github.com/chapma
 `save_suspicious_messages`, when set to `true`, causes emails that get something stripped out of them by [Sanitize](https://github.com/rgrove/sanitize) to get stored in the DB for analysis.
 
 `save_failed_messages`, when set to `true`, causes emails that don't pass a CAPTCHA to get stored for analysis.
+
+### Preorders
+
+An endpoint for processing project preorders, this is an attempt to gauge interest in open source hardware projects before doing an initial production run of boards. Does a couple things:
+
+- Validates CAPTCHA so the form is more resistant to being used for spamming
+- Strips preorder fields, persists to DB
+- Emails a confirmation with the details of the preorder and a link to verify
+- Handles the verification URL
+
+There's no interface for viewing the preorders as I intend to dump the DB and load it into something else for order processing. There's a `rake` task for creating projects to be used with preorders, it follows as:
+
+```
+rake project:create NAME=project-name PRINTABLE_NAME='The Printable Name'
+```
+
+`NAME` is what comes in on the `POST` to `/preorder/project-name` and `PRINTABLE_NAME` is the name used in the confirmation email.
