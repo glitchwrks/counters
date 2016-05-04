@@ -48,3 +48,7 @@ rake project:create NAME=project-name PRINTABLE_NAME='The Printable Name'
 ```
 
 `NAME` is what comes in on the `POST` to `/preorder/project-name` and `PRINTABLE_NAME` is the name used in the confirmation email.
+
+### CAPTCHA Service
+
+This service was written for the Preorder feature, but is generic and can be used elsewhere. It uses Google's [reCAPTCHA service](https://www.google.com/recaptcha). The service is configured through [/config/recaptcha.yml](https://github.com/chapmajs/site_services/blob/master/config/recaptcha.yml.example) which allows per-action API key specification
