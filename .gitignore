@@ -1,3 +1,4 @@
 *.log
 database.yml
 email.yml
+recaptcha.yml
