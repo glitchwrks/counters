@@ -32,7 +32,15 @@ This feature is controlled through [/config/email.yml](https://github.com/chapma
 
 `save_failed_messages`, when set to `true`, causes emails that don't pass a CAPTCHA to get stored for analysis.
 
+### CAPTCHA Service
+
+This service was written for the Preorder feature, but is generic and can be used elsewhere. It uses Google's [reCAPTCHA service](https://www.google.com/recaptcha). The service is configured through [/config/recaptcha.yml](https://github.com/chapmajs/site_services/blob/master/config/recaptcha.yml.example) which allows per-action API key specification.
+
+If the CAPTCHA verification fails, the failure is logged to the DB with the response from Google and the IP that the request was made from.
+
 ### Preorders
+
+*This has since been moved to a differnent project. [This SHA](https://github.com/chapmajs/site_services/tree/3054dc5f87e2bd73e95b2ba6d5ab6aa67731e8b0) contains the final version.
 
 An endpoint for processing project preorders, this is an attempt to gauge interest in open source hardware projects before doing an initial production run of boards. Does a couple things:
 
@@ -48,9 +56,3 @@ rake project:create NAME=project-name PRINTABLE_NAME='The Printable Name'
 ```
 
 `NAME` is what comes in on the `POST` to `/preorder/project-name` and `PRINTABLE_NAME` is the name used in the confirmation email.
-
-### CAPTCHA Service
-
-This service was written for the Preorder feature, but is generic and can be used elsewhere. It uses Google's [reCAPTCHA service](https://www.google.com/recaptcha). The service is configured through [/config/recaptcha.yml](https://github.com/chapmajs/site_services/blob/master/config/recaptcha.yml.example) which allows per-action API key specification.
-
-If the CAPTCHA verification fails, the failure is logged to the DB with the response from Google and the IP that the request was made from.

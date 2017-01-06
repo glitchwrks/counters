@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160504020656) do
+ActiveRecord::Schema.define(version: 20170105193110) do
 
   create_table "counters", force: :cascade do |t|
     t.string   "name",         limit: 255
@@ -40,27 +40,6 @@ ActiveRecord::Schema.define(version: 20160504020656) do
     t.text     "content",    limit: 65535
     t.string   "address",    limit: 255
     t.string   "sti_type",   limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "preorders", force: :cascade do |t|
-    t.integer  "project_id",         limit: 4
-    t.string   "name",               limit: 255
-    t.string   "email",              limit: 255
-    t.string   "boards",             limit: 255
-    t.string   "kits",               limit: 255
-    t.string   "assembled",          limit: 255
-    t.string   "address",            limit: 255
-    t.string   "confirmation_token", limit: 255
-    t.string   "sti_type",           limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "projects", force: :cascade do |t|
-    t.string   "name",           limit: 255
-    t.string   "printable_name", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
