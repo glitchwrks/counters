@@ -40,7 +40,7 @@ If the CAPTCHA verification fails, the failure is logged to the DB with the resp
 
 ### Preorders
 
-*This has since been moved to a differnent project. [This SHA](https://github.com/chapmajs/site_services/tree/3054dc5f87e2bd73e95b2ba6d5ab6aa67731e8b0) contains the final version.
+*This has since been moved to a differnent project. [This SHA](https://github.com/chapmajs/site_services/tree/3054dc5f87e2bd73e95b2ba6d5ab6aa67731e8b0) contains the final version.*
 
 An endpoint for processing project preorders, this is an attempt to gauge interest in open source hardware projects before doing an initial production run of boards. Does a couple things:
 
