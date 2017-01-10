@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105193110) do
+ActiveRecord::Schema.define(version: 20170110160750) do
 
   create_table "counters", force: :cascade do |t|
     t.string   "name",         limit: 255
@@ -31,18 +31,6 @@ ActiveRecord::Schema.define(version: 20170105193110) do
   end
 
   add_index "hits", ["counter_id"], name: "index_hits_on_counter_id", using: :btree
-
-  create_table "messages", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "email",      limit: 255
-    t.string   "subject",    limit: 255
-    t.string   "check",      limit: 255
-    t.text     "content",    limit: 65535
-    t.string   "address",    limit: 255
-    t.string   "sti_type",   limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "recaptcha_failures", force: :cascade do |t|
     t.string   "challenge_timestamp", limit: 255

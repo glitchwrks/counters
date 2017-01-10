@@ -18,20 +18,6 @@ This feature is broken into two main DB models: Counter and Hit. Counters are pa
 
 The rake task `counter:consolidate_hits` allows for keeping the DB small by consolidating all hits for a counter into the counter's preload value. The current hits are counted, added to the counter's preload, and then deleted. 
 
-### Contact Form
-
-Better than just sticking one's email address on the Internet, right? Simple target for a form hosted on the main site. I wanted to do a few things with it:
-
-- Configurable for production/dev work, so emails could go to [mailtrap.io](https://mailtrap.io)
-- Sanitize emails to plaintext
-- Save emails that don't get sent, for whatever reason
-
-This feature is controlled through [/config/email.yml](https://github.com/chapmajs/site_services/blob/master/config/email.yml.example). There are two main sections to the YAML file: a per-environment definition for the mail server to use (`development` given in the example), and a `contact_mailer` section which controls a few aspects of the mailer. It allows changing the destination email and persistence of failed/suspicious emails.
-
-`save_suspicious_messages`, when set to `true`, causes emails that get something stripped out of them by [Sanitize](https://github.com/rgrove/sanitize) to get stored in the DB for analysis.
-
-`save_failed_messages`, when set to `true`, causes emails that don't pass a CAPTCHA to get stored for analysis.
-
 ### CAPTCHA Service
 
 This service was written for the Preorder feature, but is generic and can be used elsewhere. It uses Google's [reCAPTCHA service](https://www.google.com/recaptcha). The service is configured through [/config/recaptcha.yml](https://github.com/chapmajs/site_services/blob/master/config/recaptcha.yml.example) which allows per-action API key specification.
@@ -56,3 +42,19 @@ rake project:create NAME=project-name PRINTABLE_NAME='The Printable Name'
 ```
 
 `NAME` is what comes in on the `POST` to `/preorder/project-name` and `PRINTABLE_NAME` is the name used in the confirmation email.
+
+### Contact Form
+
+*This has since been moved to a differnent project. [This SHA](https://github.com/chapmajs/site_services/tree/b598178877676fe3e3d95532cc90ef9bc3e6bd19) contains the final version.*
+
+Better than just sticking one's email address on the Internet, right? Simple target for a form hosted on the main site. I wanted to do a few things with it:
+
+- Configurable for production/dev work, so emails could go to [mailtrap.io](https://mailtrap.io)
+- Sanitize emails to plaintext
+- Save emails that don't get sent, for whatever reason
+
+This feature is controlled through [/config/email.yml](https://github.com/chapmajs/site_services/blob/master/config/email.yml.example). There are two main sections to the YAML file: a per-environment definition for the mail server to use (`development` given in the example), and a `contact_mailer` section which controls a few aspects of the mailer. It allows changing the destination email and persistence of failed/suspicious emails.
+
+`save_suspicious_messages`, when set to `true`, causes emails that get something stripped out of them by [Sanitize](https://github.com/rgrove/sanitize) to get stored in the DB for analysis.
+
+`save_failed_messages`, when set to `true`, causes emails that don't pass a CAPTCHA to get stored for analysis.

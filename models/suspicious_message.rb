@@ -1,2 +1,0 @@
-class SuspiciousMessage < Message
-end
