@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170110160750) do
+ActiveRecord::Schema.define(version: 20170110204025) do
 
   create_table "counters", force: :cascade do |t|
     t.string   "name",         limit: 255
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20170110160750) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "counters", ["name"], name: "index_counters_on_name", using: :btree
 
   create_table "hits", force: :cascade do |t|
     t.integer  "counter_id", limit: 4
