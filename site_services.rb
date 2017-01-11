@@ -9,8 +9,8 @@ class SiteServices < Sinatra::Base
   enable :logging
   set :port, '8080'
 
-  get '/counters/:page' do
-    counter = Counter.find_by(:name => params[:page])
+  get '/counters/:name' do
+    counter = Counter.find_by(:name => params[:name])
     halt 404 unless counter.present?
 
     Hit.process_hit(request, counter)
