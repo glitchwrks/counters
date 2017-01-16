@@ -6,7 +6,6 @@ gem 'mysql2'
 gem 'rake'
 gem 'unicorn'
 gem 'require_all'
-gem 'sanitize'
 gem 'activesupport'
 
 group :development do
