@@ -22,14 +22,12 @@ Doing a HTTP GET to `/counters/:name` will return a bit of JavaScript to write t
 
 ### CAPTCHA Service
 
-This service was written for the Preorder feature, but is generic and can be used elsewhere. It uses Google's [reCAPTCHA service](https://www.google.com/recaptcha). The service is configured through [/config/recaptcha.yml](https://github.com/chapmajs/site_services/blob/master/config/recaptcha.yml.example) which allows per-action API key specification.
-
-If the CAPTCHA verification fails, the failure is logged to the DB with the response from Google and the IP that the request was made from.
+*This feature has been removed since it is no longer in use. [This SHA](https://github.com/chapmajs/site_services/tree/024c61351deba8b09e3c518979aa1c664420e8fb) contains the final version.*
 
 ### Preorders
 
-*This has since been moved to a differnent project. [This SHA](https://github.com/chapmajs/site_services/tree/3054dc5f87e2bd73e95b2ba6d5ab6aa67731e8b0) contains the final version.*
+*This has since been moved to a different project. [This SHA](https://github.com/chapmajs/site_services/tree/3054dc5f87e2bd73e95b2ba6d5ab6aa67731e8b0) contains the final version.*
 
 ### Contact Form
 
-*This has since been moved to a differnent project. [This SHA](https://github.com/chapmajs/site_services/tree/b598178877676fe3e3d95532cc90ef9bc3e6bd19) contains the final version.*
+*This has since been moved to a different project. [This SHA](https://github.com/chapmajs/site_services/tree/b598178877676fe3e3d95532cc90ef9bc3e6bd19) contains the final version.*
