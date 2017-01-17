@@ -13,6 +13,8 @@ pid '/var/run/unicorn/site_services.pid'
 stderr_path '/var/log/unicorn/site_services_error.log'
 stdout_path '/var/log/unicorn/site_services.log'
 
+logger Logger.new($stdout)
+
 # use correct Gemfile on restarts
 before_exec do |server|
   ENV['BUNDLE_GEMFILE'] = "#{app_path}/current/Gemfile"
