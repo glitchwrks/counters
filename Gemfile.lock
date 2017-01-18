@@ -86,7 +86,6 @@ DEPENDENCIES
   highline
   mysql2
   rake
-  rbnacl
   rbnacl-libsodium
   require_all
   sinatra
