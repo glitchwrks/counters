@@ -8,6 +8,7 @@ require_all 'services'
 class SiteServices < Sinatra::Base
   enable :logging
   set :port, '8080'
+  set :protection, :except => [:json_csrf]
 
   get '/counters/:name' do
     counter = Counter.find_by(:name => params[:name])
