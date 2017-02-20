@@ -14,6 +14,7 @@ class SiteServices < Sinatra::Base
     halt 404 unless counter.present?
 
     Hit.process_hit(request, counter)
+    content_type 'application/json'
     counter.javascript_hit_count(params[:ipv6])
   end
 
