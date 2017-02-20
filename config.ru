@@ -1,5 +1,7 @@
 require 'sinatra'
+require 'rack/protection'
 
+use Rack::Protection, :except => :json_csrf
 root_dir = File.dirname(__FILE__)
 app_file = File.join(root_dir, 'site_services.rb')
 require app_file
