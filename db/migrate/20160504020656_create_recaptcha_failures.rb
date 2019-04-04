@@ -1,4 +1,4 @@
-class CreateRecaptchaFailures < ActiveRecord::Migration
+class CreateRecaptchaFailures < ActiveRecord::Migration[5.2]
   def change
       create_table :recaptcha_failures do |t|
       t.string :challenge_timestamp

@@ -1,4 +1,4 @@
-class AddIndexOnCounterName < ActiveRecord::Migration
+class AddIndexOnCounterName < ActiveRecord::Migration[5.2]
   def change
     add_index :counters, :name
   end

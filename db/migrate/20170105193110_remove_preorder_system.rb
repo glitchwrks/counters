@@ -1,4 +1,4 @@
-class RemovePreorderSystem < ActiveRecord::Migration
+class RemovePreorderSystem < ActiveRecord::Migration[5.2]
 
   def up
     drop_table :preorders

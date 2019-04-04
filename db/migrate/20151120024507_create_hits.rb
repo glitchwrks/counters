@@ -1,4 +1,4 @@
-class CreateHits < ActiveRecord::Migration
+class CreateHits < ActiveRecord::Migration[5.2]
   def change
     create_table :hits do |t|
       t.references :counter

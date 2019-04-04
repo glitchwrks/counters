@@ -1,4 +1,4 @@
-class RemoveMessageSystem < ActiveRecord::Migration
+class RemoveMessageSystem < ActiveRecord::Migration[5.2]
 
   def up
     drop_table :messages
