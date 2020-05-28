@@ -1,6 +1,7 @@
 development:
   adapter: mysql2
   database: site_services
+  encoding: utf8mb4
   username: root
   password: s3cre7
   host: localhost
@@ -8,6 +9,7 @@ development:
 production:
   adapter: mysql2
   database: site_services
+  encoding: utf8mb4
   username: root
   password: sup3rs3cre7
   host: localhost
