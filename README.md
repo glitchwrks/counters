@@ -1,7 +1,7 @@
 # site_services
 Sinatra app that provides services to glitchwrks.com
 
-This is a little Sinatra app that handles dynamic content for glitchwrks.com. Right now it's handling hit counters (or 'traffic analytics,' if hit counters are too 90's). This is currently deployed on an OpenBSD 5.8 host running nginx.
+This is a little Sinatra app that handles dynamic content for glitchwrks.com. Right now it's handling hit counters (or 'traffic analytics,' if hit counters are too 90's). This is currently deployed on an OpenBSD 6.9 host running nginx.
 
 ### Project Pieces
 
