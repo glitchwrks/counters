@@ -7,11 +7,11 @@ RSpec.describe Hit, :type => :model do
   it { is_expected.to validate_uniqueness_of(:address).case_insensitive.scoped_to(:counter_id) }
 
   describe 'class method #process_hit' do
+    let(:mock_request) { mock() }
     let!(:counter) { FactoryBot.create(:counter) }
     let(:processed_hit) { counter.hits.first }
 
     describe 'new Hit with an IPv4 address' do
-      let(:mock_request) { mock() }
 
       before(:each) do
         mock_request.expects(:ip).returns('1.2.3.4').twice
@@ -25,7 +25,6 @@ RSpec.describe Hit, :type => :model do
     end
 
     describe 'new Hit with an IPv6 address' do
-      let(:mock_request) { mock() }
 
       before(:each) do
         mock_request.expects(:ip).returns('2001:db8:1::1').twice
@@ -39,7 +38,6 @@ RSpec.describe Hit, :type => :model do
     end
 
     describe 'when a Hit already exists for the address' do
-      let(:mock_request) { mock() }
 
       before(:each) do
         Timecop.freeze(1.day.ago) do
