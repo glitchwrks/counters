@@ -61,5 +61,15 @@ RSpec.describe Hit, :type => :model do
         end
       end
     end
+
+    describe 'optional Hit dependency injection' do
+      let(:mock_hit) { mock(:hit) }
+
+      it 'should allow a Hit to be passed in' do
+        mock_hit.expects(:new_record?).returns(true)
+        mock_request.expects(:ip).never
+        Hit.process_hit(mock_request, counter, mock_hit)
+      end
+    end
   end
 end
