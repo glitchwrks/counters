@@ -26,4 +26,7 @@ group :test do
   gem 'mocha'
   gem 'database_cleaner'
   gem 'simplecov'
+  gem 'factory_bot'
+  gem 'shoulda-matchers'
+  gem 'timecop'
 end
