@@ -8,6 +8,7 @@ require 'sinatra/activerecord'
 require 'database_cleaner'
 require 'factory_bot'
 
+require_relative 'support/helpers/collision_maker'
 
 require_relative '../site_services'
 
