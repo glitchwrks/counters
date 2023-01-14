@@ -19,3 +19,11 @@ group :development do
   gem 'highline'
   gem 'rbnacl-libsodium'
 end
+
+group :test do
+  gem 'rspec'
+  gem 'rack-test'
+  gem 'mocha'
+  gem 'database_cleaner'
+  gem 'simplecov'
+end
