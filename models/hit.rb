@@ -1,7 +1,7 @@
 class Hit < ActiveRecord::Base
   belongs_to :counter
 
-  validates :address, :uniqueness => {:scope => :counter_id}
+  validates :address, :presence => true, :uniqueness => {:scope => :counter_id}
 
   # BEGIN Class Methods
 
