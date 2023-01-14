@@ -52,6 +52,16 @@ RSpec.describe Hit, :type => :model do
 
       it { expect(counter.hits.count).to eq 1 }
       it { expect(processed_hit.updated_at).to be > processed_hit.created_at }
+
+      describe 'collision that results in a RecordNotUnique error' do
+        it 'should try again' do
+          CollisionMaker.reset!
+
+          expect(Hit.process_hit(mock_request, counter, CollisionMaker)).to eq 'It retried'
+          expect(CollisionMaker.invocation_count).to eq 2
+          expect(CollisionMaker.raised_error?).to be_truthy
+        end
+      end
     end
   end
 end
