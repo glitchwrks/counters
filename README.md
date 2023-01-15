@@ -38,11 +38,11 @@ Doing a HTTP GET to `/counters/:name` will return a bit of JavaScript to write t
 
 ### Test Suite
 
-This application uses RSpec. To run the test suite on a new workstation, do:
+This application uses [RSpec](http://rspec.info/). To run the test suite on a new workstation, do:
 
 ```
 rake db:test:prepare
 rspec
 ```
 
-SimpleCov provides code coverage reporting.
+[SimpleCov](https://github.com/simplecov-ruby/simplecov) provides code coverage reporting.
