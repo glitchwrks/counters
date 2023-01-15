@@ -22,4 +22,8 @@ FactoryBot.define do
     end
   end
 
+  factory :sitewide_counter do
+    sequence(:name) { |n| "sitewide_counter_#{n}"} 
+  end
+
 end
