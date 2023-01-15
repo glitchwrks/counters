@@ -1,31 +1,27 @@
 class CollisionMaker
-  def self.touch
-    @@invocation_count ||= 0
-    @@raised_error ||= false
-    @@invocation_count += 1
+  attr_reader :invocation_count, :raised_error
 
-    if @@invocation_count > 1
-      'It retried'
+  def initialize 
+    reset!
+  end
+
+  def touch
+    @invocation_count += 1
+
+    if @invocation_count > 1
+      self
     else
-      @@raised_error = true
+      @raised_error = true
       raise ActiveRecord::RecordNotUnique
     end
   end
 
-  def self.new_record?
+  def new_record?
     false
   end
 
-  def self.invocation_count
-    @@invocation_count ||= 0
-  end
-
-  def self.raised_error?
-    @@raised_error
-  end
-
-  def self.reset!
-    @@invocation_count = 0
-    @@raised_error = false
+  def reset!
+    @invocation_count = 0
+    @raised_error = false
   end
 end
