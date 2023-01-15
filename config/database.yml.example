@@ -6,6 +6,13 @@ development:
   password: s3cre7
   host: localhost
 
+test:
+  adapter: mysql2
+  database: site_services_test
+  username: root
+  password: s3cre7
+  host: localhost
+
 production:
   adapter: mysql2
   database: site_services
