@@ -32,6 +32,10 @@ Doing a HTTP GET to `/counters/:name` will return a bit of JavaScript to write t
 
 *This has since been moved to a different project. [This SHA](https://github.com/chapmajs/site_services/tree/b598178877676fe3e3d95532cc90ef9bc3e6bd19) contains the final version.*
 
+### Text Email Sending Service
+
+*This service was no longer being used and was removed. [This SHA](https://github.com/chapmajs/site_services/tree/6f2cb5e72846eba2dfa18c6d69d9dbb56dd1b406) contains the final version.*
+
 ### Test Suite
 
 This application uses RSpec. To run the test suite on a new workstation, do:

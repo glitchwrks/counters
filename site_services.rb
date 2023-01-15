@@ -3,7 +3,6 @@ require 'sinatra/activerecord'
 require 'require_all'
 
 require_all 'models'
-require_all 'services'
 
 class SiteServices < Sinatra::Base
   enable :logging
