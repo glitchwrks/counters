@@ -31,3 +31,14 @@ Doing a HTTP GET to `/counters/:name` will return a bit of JavaScript to write t
 ### Contact Form
 
 *This has since been moved to a different project. [This SHA](https://github.com/chapmajs/site_services/tree/b598178877676fe3e3d95532cc90ef9bc3e6bd19) contains the final version.*
+
+### Test Suite
+
+This application uses RSpec. To run the test suite on a new workstation, do:
+
+```
+rake db:test:prepare
+rspec
+```
+
+SimpleCov provides code coverage reporting.
