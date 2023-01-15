@@ -17,7 +17,7 @@ class Counter < ActiveRecord::Base
 
   alias_method :ipv6_hit_count, :counter_specific_ipv6_hit_count
 
-  def javascript_hit_count(ipv6)
+  def javascript_hit_count(ipv6 = false)
     output = "#{pad(ipv4_hit_count + ipv6_hit_count)}"
     output += " (#{pad(ipv6_hit_count)} on IPv6)" if ipv6
 
