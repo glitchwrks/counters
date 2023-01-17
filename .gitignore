@@ -5,3 +5,6 @@ recaptcha.yml
 
 # Ingore SimpleCov coverage reporting
 /coverage/
+
+# Ignoring editor tempfiles
+*~
