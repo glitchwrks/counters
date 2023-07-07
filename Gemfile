@@ -6,7 +6,7 @@ gem 'mysql2'
 gem 'rake'
 gem 'unicorn'
 gem 'require_all'
-gem 'activesupport', '~> 6.1'
+gem 'activesupport', '~> 6.1.7.3'
 
 group :development do
   gem 'bcrypt_pbkdf'
