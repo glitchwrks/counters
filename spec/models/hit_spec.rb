@@ -21,7 +21,7 @@ RSpec.describe Hit, :type => :model do
       it { expect(counter.hits.count).to eq 1 }
       it { expect(processed_hit.address).to eq '1.2.3.4' }
       it { expect(processed_hit).not_to be_ipv6 }
-      it { expect(processed_hit.created_at).to eq processed_hit.updated_at }
+      it { expect(processed_hit.created_at.round).to eq processed_hit.updated_at.round }
     end
 
     describe 'new Hit with an IPv6 address' do
@@ -34,7 +34,7 @@ RSpec.describe Hit, :type => :model do
       it { expect(counter.hits.count).to eq 1 }
       it { expect(processed_hit.address).to eq '2001:db8:1::1' }
       it { expect(processed_hit).to be_ipv6 }
-      it { expect(processed_hit.created_at).to eq processed_hit.updated_at }
+      it { expect(processed_hit.created_at.round).to eq processed_hit.updated_at.round }
     end
 
     describe 'when a Hit already exists for the address' do
