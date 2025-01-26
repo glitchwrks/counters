@@ -8,7 +8,7 @@ timeout 30
 # Drop the UNIX socket within the nginx chroot
 listen '/var/www/run/counters_unicorn.sock', :backlog => 64
 
-pid '/var/run/counters_unicorn.pid'
+pid '/var/run/unicorn/counters_unicorn.pid'
 
 stderr_path '/var/log/unicorn/site_services_error.log'
 stdout_path '/var/log/unicorn/site_services.log'
