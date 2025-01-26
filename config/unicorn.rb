@@ -6,9 +6,9 @@ working_directory "#{app_path}/current"
 timeout 30
 
 # Drop the UNIX socket within the nginx chroot
-listen '/var/www/run/unicorn/site_services.sock', :backlog => 64
+listen '/var/www/run/counters_unicorn.sock', :backlog => 64
 
-pid '/var/run/unicorn/site_services.pid'
+pid '/var/run/counters_unicorn.pid'
 
 stderr_path '/var/log/unicorn/site_services_error.log'
 stdout_path '/var/log/unicorn/site_services.log'
