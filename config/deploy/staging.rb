@@ -11,4 +11,4 @@ set :unicorn_config_path, "#{current_path}/config/unicorn.rb"
 set :unicorn_pid, "/var/run/unicorn/site_services.pid"
 set :linked_files, %w{config/database.yml}
 
-after 'deploy', 'unicorn:reload'
+# after 'deploy', 'unicorn:reload'
