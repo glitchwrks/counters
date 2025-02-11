@@ -4,9 +4,6 @@ require 'capistrano/setup'
 # Include default deployment tasks
 require 'capistrano/deploy'
 
-# Cap3 Unicorn gem
-require 'capistrano3/unicorn'
-
 # Bundler support
 require 'capistrano/bundler'
 
@@ -19,6 +16,10 @@ install_plugin Capistrano::SCM::Git
 
 # Going to use RVM on the server
 require 'capistrano/rvm'
+
+# Cap3 Puma gem
+require 'capistrano/puma'
+install_plugin Capistrano::Puma
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
