@@ -14,9 +14,6 @@ require 'capistrano/rails/migrations'
 require 'capistrano/scm/git'
 install_plugin Capistrano::SCM::Git
 
-# Going to use RVM on the server
-require 'capistrano/rvm'
-
 # Cap3 Puma gem
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
