@@ -8,3 +8,6 @@ recaptcha.yml
 
 # Ignoring editor tempfiles
 *~
+
+# Ignore development PIDfile
+*.pid
