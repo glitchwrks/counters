@@ -21,3 +21,5 @@ port ENV.fetch('PORT') { 3000 }
 # processes).
 #
 workers ENV.fetch('WORKERS') { 1 }.to_i
+
+pidfile '/var/run/puma.pid'
