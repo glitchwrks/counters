@@ -16,4 +16,4 @@ port 8080
 
 workers 4
 
-pidfile 'site_services.pid'
+pidfile 'counters.pid'

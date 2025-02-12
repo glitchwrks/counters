@@ -1,5 +1,5 @@
 require 'sinatra/activerecord/rake'
-require './site_services'
+require './counters'
 
 namespace :counter do
   desc 'Create a new counter with NAME, and optionally IPV4_PRELOAD, IPV6_PRELOAD'

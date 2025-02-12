@@ -1,6 +1,6 @@
 development:
   adapter: mysql2
-  database: site_services
+  database: counters_dev
   encoding: utf8mb4
   username: root
   password: s3cre7
@@ -8,14 +8,14 @@ development:
 
 test:
   adapter: mysql2
-  database: site_services_test
+  database: counters_test
   username: root
   password: s3cre7
   host: localhost
 
 production:
   adapter: mysql2
-  database: site_services
+  database: counters
   encoding: utf8mb4
   username: root
   password: sup3rs3cre7

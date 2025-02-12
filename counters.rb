@@ -4,7 +4,7 @@ require 'require_all'
 
 require_all 'models'
 
-class SiteServices < Sinatra::Base
+class Counters < Sinatra::Base
   enable :logging
   set :port, '8080'
 

@@ -5,7 +5,7 @@ RSpec.describe 'Counters', :type => :feature do
   include Rack::Test::Methods
 
   def app
-    SiteServices
+    Counters
   end
 
   let!(:foo_sitewide_counter) { FactoryBot.create(:sitewide_counter, :name => 'foo', :ipv4_preload => 42) }

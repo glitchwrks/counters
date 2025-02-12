@@ -10,7 +10,7 @@ This is a little Sinatra app that handles hit counters (or 'traffic analytics,' 
 - Capistrano 3 for deployments
 - Puma for app serving
 
-Currently using MariaDB for the database, but it uses nothing specific to MariaDB and works fine with even SQLite. It can be run as a Puma application, or directly via `ruby site_services.rb`.
+Currently using MariaDB for the database, but it uses nothing specific to MariaDB and works fine with even SQLite. It can be run as a Puma application, or directly via `ruby counters.rb`.
 
 ### Counters
 

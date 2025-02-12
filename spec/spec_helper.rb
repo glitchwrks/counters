@@ -10,7 +10,7 @@ require 'factory_bot'
 
 require_relative 'support/helpers/collision_maker'
 
-require_relative '../site_services'
+require_relative '../counters'
 
 require 'shoulda/matchers'
 
