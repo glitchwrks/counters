@@ -14,7 +14,7 @@ RSpec.describe 'Counters', :type => :feature do
   describe 'when getting a nonexistent Counter' do
 
     before(:each) do
-      get '/counters/baz'
+      get '/baz'
     end
 
     it { expect(last_response.status).to eq 404 }
@@ -24,7 +24,7 @@ RSpec.describe 'Counters', :type => :feature do
   describe 'when getting a regular Counter' do
 
     before(:each) do
-      get '/counters/bar'
+      get '/bar'
     end
 
     it { expect(last_response.status).to eq 200 }
@@ -35,7 +35,7 @@ RSpec.describe 'Counters', :type => :feature do
   describe 'when getting a regular Counter IPv6 count' do
 
     before(:each) do
-      get '/counters/bar?ipv6=true'
+      get '/bar?ipv6=true'
     end
 
     it { expect(last_response.status).to eq 200 }
@@ -47,7 +47,7 @@ RSpec.describe 'Counters', :type => :feature do
   describe 'when getting a Sitewide Counter' do
 
     before(:each) do
-      get '/counters/foo'
+      get '/foo'
     end
 
     it { expect(last_response.status).to eq 200 }

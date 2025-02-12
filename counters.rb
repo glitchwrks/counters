@@ -8,7 +8,7 @@ class Counters < Sinatra::Base
   enable :logging
   set :port, '8080'
 
-  get '/counters/:name' do
+  get '/:name' do
     counter = Counter.find_by(:name => params[:name])
     halt 404 unless counter.present?
 
