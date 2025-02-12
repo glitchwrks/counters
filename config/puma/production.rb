@@ -12,6 +12,7 @@
 threads_count = 5
 threads threads_count, threads_count
 
+bind 'tcp://0.0.0.0:8080'
 bind 'tcp://[::0]:8080'
 
 workers 4
