@@ -17,4 +17,4 @@ bind 'tcp://[::0]:8080'
 
 workers 4
 
-pidfile 'counters.pid'
+pidfile '/home/counters/counters.pid'
