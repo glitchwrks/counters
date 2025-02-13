@@ -14,7 +14,6 @@ group :development do
   gem 'capistrano' 
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
-  gem 'capistrano3-puma'
   gem 'capistrano-rvm'
   gem 'ed25519'
   gem 'highline'
