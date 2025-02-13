@@ -20,12 +20,26 @@ The rake task `counter:consolidate_hits` allows for keeping the DB small by cons
 
 Doing a HTTP GET to `/:name` will return a bit of JavaScript to write the current hit count to the document. Including `?ipv6=true` in the query params will cause the IPv6 count to be displayed, too.
 
-### Test Suite
+### Quick Development Setup
 
-This application uses [RSpec](http://rspec.info/). To run the test suite on a new workstation, do:
+Configure your development database in `config/database.yml` and run the following:
 
 ```
-rake db:test:prepare
+RACK_ENV=development rake db:reset
+rake db:migrate
+rake db:seed
+rake counter:create NAME=test
+ruby counters.rb
+```
+
+After the above, you should be able to visit `http://localhost:8080/test`
+
+### Test Suite
+
+This application uses [RSpec](http://rspec.info/). To run the test suite on a new workstation, configure your test database in `config/database.yml` and do:
+
+```
+RACK+ENV=test rake db:test:prepare
 rspec
 ```
 
