@@ -1,7 +1,7 @@
 set :stage, :production
 set :rack_env, :production
 
-set :branch, :puma_migration
+set :branch, :staging
 
 set :default_env, { :path => "$HOME/.gem/ruby/3.3/bin:$PATH", :rack_env => :production }
 
