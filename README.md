@@ -31,6 +31,10 @@ rspec
 
 [SimpleCov](https://github.com/simplecov-ruby/simplecov) provides code coverage reporting.
 
+### Capistrano Tasks
+
+To manage the Puma process on the application server, a custom Capistrano task, `puma:restart` has been defined. This task uses OpenBSD's [`doas`](https://man.openbsd.org/OpenBSD-7.6/doas) to invoke the rc-script that controls the Puma process.
+
 ### Removed Legacy Features
 
 The following features were once part of this application, when it was called `site_services`, but have since been moved to [`rails_services`](https://github.com/glitchwrks/rails_services). The final versions of these features are available at the following SHAs:
