@@ -7,10 +7,10 @@ set :deploy_to, '/home/counters/counters'
 set :keep_releases, 2
 
 namespace :puma do
-  desc 'Restart Puma server' 
+  desc 'Restart Puma via rc-script' 
   task :restart do  
     on roles(:web) do
-      execute 'cd /home/counters/counters/current && RACK_ENV=production bundle exec pumactl phased-restart'
+      execute 'doas /etc/rc.d/counters restart'
     end  
   end
 end
