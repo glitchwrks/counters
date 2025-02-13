@@ -39,7 +39,7 @@ After the above, you should be able to visit `http://localhost:8080/test`
 This application uses [RSpec](http://rspec.info/). To run the test suite on a new workstation, configure your test database in `config/database.yml` and do:
 
 ```
-RACK+ENV=test rake db:test:prepare
+RACK_ENV=test rake db:test:prepare
 rspec
 ```
 
