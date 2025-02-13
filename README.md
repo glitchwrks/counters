@@ -18,7 +18,7 @@ This feature is broken into two main DB models: Counter and Hit. Counters are pa
 
 The rake task `counter:consolidate_hits` allows for keeping the DB small by consolidating all hits for a counter into the counter's preload value. The current hits are counted, added to the counter's preload, and then deleted.
 
-Doing a HTTP GET to `/counters/:name` will return a bit of JavaScript to write the current hit count to the document. Including `?ipv6=true` in the query params will cause the IPv6 count to be displayed, too.
+Doing a HTTP GET to `/:name` will return a bit of JavaScript to write the current hit count to the document. Including `?ipv6=true` in the query params will cause the IPv6 count to be displayed, too.
 
 ### Test Suite
 
