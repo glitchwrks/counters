@@ -9,6 +9,8 @@ gem 'puma'
 gem 'require_all'
 gem 'activesupport'
 
+gem 'uri', '>= 1.0.3'
+
 group :development do
   gem 'bcrypt_pbkdf'
   gem 'capistrano' 
